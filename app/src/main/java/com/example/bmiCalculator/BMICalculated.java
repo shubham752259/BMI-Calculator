@@ -21,7 +21,7 @@ import java.util.Objects;
 
 public class BMICalculated extends AppCompatActivity {
 
-    Button mrecalculatebmi;
+    android.widget.Button mrecalculatebmi;
     TextView mbmidisplay,mbmicategory,mgender;
     Intent intent;
     ImageView mimageview;
@@ -63,6 +63,7 @@ public class BMICalculated extends AppCompatActivity {
         intbmi = intweight/(intheight*intheight);
 
         mbmi = Double.toString(intbmi);
+        mbmi = String.format("%.2f", intbmi);
 
         if(intbmi<16){
         mbmicategory.setText("Extreme Skinny");
